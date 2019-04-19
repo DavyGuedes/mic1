@@ -81,8 +81,9 @@ Além disso, antes da memória propriamente dita, o arquivo executável gerado p
 
 Resumindo o formato do arquivo executável:
 
-| Q (4 bytes) | Inicialização | Programa (P bytes) |
+| | | |
 | --- | --- | --- |
+| Q (4 bytes) | Inicialização | Programa (P bytes) |
 
 Os 20 bytes de inicialização devem ficar nas 20 primeiras posições de memória do emulador. Os P bytes do programa devem ser jogados para as P posições de memória a partir da posição indicada pelo valor de PC determinado nos bytes 12 a 15 da inicialização (embora estejam em sequência no arquivo).
 
