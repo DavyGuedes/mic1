@@ -80,6 +80,7 @@ Perceba que, embora o programa a ser gravado pelo montador no arquivo comece no 
 Além disso, antes da memória propriamente dita, o arquivo executável gerado pelo montador possui um valor Q de 4 bytes (um unsigned int) indicando o tamanho completo do programa a ser carregado (inicialização + programa propriamente dito). Assim, se o programa propriamente dito tem P bytes de tamanho, Q = (20 + P). Isso permite uma cópia em lote de toda uma sequência de bytes, evitando, na hora de abrir, de ter que copiar o arquivo em um laço byte a byte até eof.
 
 Resumindo o formato do arquivo executável:
+
 | Q (4 bytes) | Inicialização | Programa (P bytes) |
 | --- | --- | --- |
 
@@ -92,3 +93,7 @@ Como não existe instrução de declaração de variáveis, uma primeira lida no
 ## PARTE 3 – Programando para sua máquina
 
 Crie outros pequenos programas em assembly MAC-1, monte com o seu assembler e execute com o seu emulador de MIC-1.
+
+## Exemplos (by prof.: Yuri)
+
+- [Exemplos](examples/README.md)

@@ -7,6 +7,5 @@
 
 ## More info
 
-[lia.ufc.br/~yuri](http://www.lia.ufc.br/~yuri/)
-
-[ia.ufc.br/~yuri/20181/arquitetura/trab1.html](http://www.lia.ufc.br/~yuri/20181/arquitetura/trab1.html)
+- [lia.ufc.br/~yuri](http://www.lia.ufc.br/~yuri/)
+- [ia.ufc.br/~yuri/20181/arquitetura/trab1.html](http://www.lia.ufc.br/~yuri/20181/arquitetura/trab1.html)
