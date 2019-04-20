@@ -1,5 +1,13 @@
 # Trabalho 1 – Emulador MIC-1 e Assembler MAC-1
 
+- [Trabalho 1 – Emulador MIC-1 e Assembler MAC-1](#trabalho-1-%E2%80%93-emulador-mic-1-e-assembler-mac-1)
+  - [Descrição Geral](#descri%C3%A7%C3%A3o-geral)
+  - [PARTE 1 – Emulador MIC-1](#parte-1-%E2%80%93-emulador-mic-1)
+  - [PARTE 2 – Assembler MAC-1](#parte-2-%E2%80%93-assembler-mac-1)
+  - [PARTE 3 – Programando para sua máquina](#parte-3-%E2%80%93-programando-para-sua-m%C3%A1quina)
+  - [Exemplos (by prof.: Yuri)](#exemplos-by-prof-yuri)
+  - [More info](#more-info)
+
 ## Descrição Geral
 
 Você deverá implementar um emulador da microarquitetura MIC-1 e um montador para a linguagem assembly MAC-1, executável em MIC-1 através de tradução realizada pelo microprograma "[microprog.rom](examples/microprog.rom)" disponibilizado.
@@ -98,3 +106,8 @@ Crie outros pequenos programas em assembly MAC-1, monte com o seu assembler e ex
 ## Exemplos (by prof.: Yuri)
 
 - [Exemplos](examples/README.md)
+
+## More info
+
+- Teacher page: [lia.ufc.br/~yuri](http://www.lia.ufc.br/~yuri/)
+- [lia.ufc.br/~yuri/20181/arquitetura/trab1.html](http://www.lia.ufc.br/~yuri/20181/arquitetura/trab1.html)
