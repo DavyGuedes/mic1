@@ -1,10 +1,10 @@
-# Trabalho 1 – Emulador MIC-1 e Assembler MAC-1
+# Trabalho 1 - Emulador MIC-1 e Assembler MAC-1
 
-- [Trabalho 1 – Emulador MIC-1 e Assembler MAC-1](#trabalho-1-%E2%80%93-emulador-mic-1-e-assembler-mac-1)
+- [Trabalho 1 - Emulador MIC-1 e Assembler MAC-1](#trabalho-1---emulador-mic-1-e-assembler-mac-1)
   - [Descrição Geral](#descri%C3%A7%C3%A3o-geral)
-  - [PARTE 1 – Emulador MIC-1](#parte-1-%E2%80%93-emulador-mic-1)
-  - [PARTE 2 – Assembler MAC-1](#parte-2-%E2%80%93-assembler-mac-1)
-  - [PARTE 3 – Programando para sua máquina](#parte-3-%E2%80%93-programando-para-sua-m%C3%A1quina)
+  - [PARTE 1 - Emulador MIC-1](#parte-1---emulador-mic-1)
+  - [PARTE 2 - Assembler MAC-1](#parte-2---assembler-mac-1)
+  - [PARTE 3 - Programando para sua máquina](#parte-3---programando-para-sua-m%C3%A1quina)
   - [Exemplos (by prof.: Yuri)](#exemplos-by-prof-yuri)
   - [More info](#more-info)
 
@@ -12,7 +12,7 @@
 
 Você deverá implementar um emulador da microarquitetura MIC-1 e um montador para a linguagem assembly MAC-1, executável em MIC-1 através de tradução realizada pelo microprograma "[microprog.rom](examples/microprog.rom)" disponibilizado.
 
-## PARTE 1 – Emulador MIC-1
+## PARTE 1 - Emulador MIC-1
 
 A microarquitetura MIC-1 é uma arquitetura de microprocessador baseado em microprograma de controle proposta por Tanembaum em seu livro Organização Estruturada de Computadores (a partir da quarta edição. O autor também propõe em seu livro um microprograma que torna MIC-1 capaz de executar um conjunto de instruções de uma máquina semelhante à Máquina Virtual Java (JVM), à qual ele dá o nome de MAC-1.
 
@@ -24,7 +24,7 @@ Na primeira parte do seu trabalho, você deve implementar o emulador de MIC-1 se
 
 Se o seu emulador estiver funcionando adequadamente, ao carregar "[microprog.rom](examples/microprog.rom)" no armazenamento de controle (simulado como um array de unsigned long int) e "[prog.exe](examples/prog.exe)" na memória principal (simulada como um array de bytes), o programa deve ser executado corretamente. Acompanhe o funcionamento estudando a lógica de "[prog.asm](examples/prog.asm)".
 
-## PARTE 2 – Assembler MAC-1
+## PARTE 2 - Assembler MAC-1
 
 A linguagem assembly de MAC-1 é definida no capítulo 4, seção 4.2. Você deverá implementar um montador que gera o código binário (bytecode) de um programa escrito com tal conjunto de instruções, seguindo cuidadosamente sua especificação. Assim, você poderá escrever um programa em assembly MAC-1, montar e executar em seu emulador MIC-1.
 
@@ -61,15 +61,15 @@ Existe um trecho do microprograma de controle responsável por fazer a inicializ
 
 memory[1] = 0x73; //init
 
-memory[4] = 0x0006; //(CPP inicia com o valor 0x0006 guardado na palavra 1 – bytes 4 a 7.)
+memory[4] = 0x0006; //(CPP inicia com o valor 0x0006 guardado na palavra 1 - bytes 4 a 7.)
 
 word tmp = 0x1001; //LV
 
-memcpy(&(memory[8]), &tmp, 4); //(LV inicia com o valor de tmp guardado na palavra 2 – bytes 8 a 11)
+memcpy(&(memory[8]), &tmp, 4); //(LV inicia com o valor de tmp guardado na palavra 2 - bytes 8 a 11)
 
 tmp = 0x0400; //PC
 
-memcpy(&(memory[12]), &tmp, 4); //(PC inicia com o valor de tmp guardado na palavra 3 – bytes 12 a 15)
+memcpy(&(memory[12]), &tmp, 4); //(PC inicia com o valor de tmp guardado na palavra 3 - bytes 12 a 15)
 
 tmp = 0x1001 + num_of_vars; //SP
 
@@ -79,7 +79,7 @@ tmp = 0x1001 + num_of_vars; //SP
 
 //Cada variável gasta uma palavra de memória. Por isso a soma de LV com num_of_vars.
 
-memcpy(&(memory[16]), &tmp, 4); //(SP inicia com o valor de tmp guardado na palavra 4 – bytes 16 a 19)
+memcpy(&(memory[16]), &tmp, 4); //(SP inicia com o valor de tmp guardado na palavra 4 - bytes 16 a 19)
 
 ```
 
@@ -99,7 +99,7 @@ Como não existe instrução de declaração de variáveis, uma primeira lida no
 
 \* Caso tenha curiosidade em ver como é feita a montagem do microprograma de controle, aqui está o código fonte do programa que gera o arquivo "[microprog.rom](examples/microprog.rom)": microassembler.cpp .
 
-## PARTE 3 – Programando para sua máquina
+## PARTE 3 - Programando para sua máquina
 
 Crie outros pequenos programas em assembly MAC-1, monte com o seu assembler e execute com o seu emulador de MIC-1.
 
