@@ -16,8 +16,8 @@ byte MBR = 0;			  // Acesso da Memoria
 palavra SP = 0, LV = 0, TOS = 0, // Operação da ULA 
 		OPC = 0, CPP = 0, H = 0; // Operação da ULA 
 
-microinstrucao MIR; // Contém a MicroInstrução Atual
-palavra MPC = 0; // Contém o endereço para a próxima MicroInstrução
+microinstrucao MIR; // Contem a MicroIsntrução Atual
+palavra MPC = 0; // Contem o endereco para a proxima MicroIsntrução
 
 // Barramentos
 
@@ -27,7 +27,7 @@ palavra Barramento_B, Barramento_C;
 
 byte N, Z;
 
-// Auxiliadores para Decodificar Microinstrução
+// Auxiladores para Decodificar Microinstrução
 
 byte MIR_B, MIR_Operacao, MIR_Deslocador, MIR_MEM, MIR_pulo;
 palavra MIR_C;
@@ -55,11 +55,13 @@ void pular();
 
 void binario(void* valor, int tipo);
 
+
+
 // Laço Principal
 
 int main(int argc, const char *argv[]){
 	carregar_microprogram_de_controle();
-	carregar_programa(argv[1]);
+	carregar_programa("prog4.exe");
 	while(1){
 		exibir_processos();
 		MIR = Armazenamento[MPC];
@@ -168,8 +170,8 @@ void realizar_operacao_ALU(){
 	}
 
 	switch(MIR_Deslocador){
-		case 1: Barramento_B = Barramento_B >> 1; break;
-		case 2: Barramento_B = Barramento_B << 8; break;
+		case 1: Barramento_C = Barramento_C << 8; break;
+		case 2: Barramento_C = Barramento_C >> 1; break;		
 	}
 }
 
