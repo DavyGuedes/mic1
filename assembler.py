@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 
 #dicionario das instruções com seus respectivos codigos hexadecimais e operando(s)
