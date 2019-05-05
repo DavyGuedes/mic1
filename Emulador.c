@@ -16,8 +16,8 @@ byte MBR = 0;			  // Acesso da Memoria
 palavra SP = 0, LV = 0, TOS = 0, // Operação da ULA 
 		OPC = 0, CPP = 0, H = 0; // Operação da ULA 
 
-microinstrucao MIR; // Contem a MicroIsntrução Atual
-palavra MPC = 0; // Contem o endereco para a proxima MicroIsntrução
+microinstrucao MIR; // Contem a Microinstrução Atual
+palavra MPC = 0; // Contem o endereco para a proxima Microinstrução
 
 // Barramentos
 
@@ -61,7 +61,7 @@ void binario(void* valor, int tipo);
 
 int main(int argc, const char *argv[]){
 	carregar_microprogram_de_controle();
-	carregar_programa("prog4.exe");
+	carregar_programa(argv[1]);
 	while(1){
 		exibir_processos();
 		MIR = Armazenamento[MPC];
