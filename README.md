@@ -32,6 +32,10 @@ com Docker:
 ```sh
 # executa um container com a imagem do projeto e suas depedencias (assemlber e emulador)
 docker run -it marcosdavy/mic1:latest
+# dentro do container, voce podera tanto montar o assembler com
+python3 assembler.py prog.asm
+# e tambem executar o emulador com o binario gerado pelo assembler
+./Emulador prog.exe
 ```
 
 ## Exemplo de uso
