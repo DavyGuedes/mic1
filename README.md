@@ -59,9 +59,20 @@ Compile os arquivos como descrito na seção de instalação.
 - 0.0.1
   - Trabalho em andamento
 
-## Meta
+## Info
 
 <!-- Seu Nome – [@SeuNome](https://twitter.com/...) – SeuEmail@exemplo.com -->
+Equipe:
+
+- André Brizzante Cintra
+- Daniel Rebouças de Queiroz
+- Davi Bessa steindorfer
+- David Lael Barroso Teixeira
+- Diego Freitas Holanda
+- Eduardo Alcântara de Alencar Pinto
+- Felipe Rodrigues Keiler
+- Marcos Davy Guedes Dias
+- Pedro Ernesto de Oliveira Primo
 
 Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
