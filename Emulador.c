@@ -73,7 +73,6 @@ int main(int argc, const char *argv[]){
 		atribuir_barramento_C();
 		operar_memoria();
 		pular();
-
 	}
 
 	return 0;
@@ -201,12 +200,13 @@ void pular(){
 }
 
 void exibir_processos(){
+
 	if(LV && SP){
 		printf("\t\t  PILHA DE OPERANDOS\n");
 		printf("========================================\n");
 		printf("     END");
-		printf("\t\t   BINARIO DO VALOR");
-		printf(" \t\t\tVALOR\n");
+		printf("\t   BINARIO DO VALOR");
+		printf(" \t\tVALOR\n");
 		for(int i = SP ; i >= LV ; i--){
 			palavra valor;
 			memcpy(&valor, &Memoria[i*4],4);			
@@ -226,12 +226,12 @@ void exibir_processos(){
 	if(PC >= 0x0401) {
 		printf("\n\t\t\tArea do Programa\n");
 		printf("========================================\n");
-		printf("\t\t\t   Binario");
-		printf("\tHEX");
+		printf("\t\tBinario");
+		printf("\t HEX");
 		printf("  END DE BYTE\n");
 		for(int i = PC - 2; i <= PC + 3 ; i++){
-			if(i == PC) printf("Em execução >> ");
-			else printf("\t\t\t   ");
+			if(i == PC) printf("Em execução >>  ");
+			else printf("\t\t");
 			binario(&Memoria[i], 2);
 			printf(" 0x%02X ", Memoria[i]);
 			printf("\t%X\n", i);
@@ -239,13 +239,13 @@ void exibir_processos(){
 		printf("========================================\n\n");
 	}
 
-	printf("\t\t\t\tREGISTRADORES\n");
-	printf("\t\tBINARIO");
-	printf("\t\t\t\t\t\t   HEX\n");
+	printf("\t\tREGISTRADORES\n");
+	printf("\tBINARIO");
+	printf("\t\t\t\tHEX\n");
 	printf("MAR: "); binario(&MAR, 3); printf("\t%x\n", MAR);
 	printf("MDR: "); binario(&MDR, 3); printf("\t%x\n", MDR);
 	printf("PC:  "); binario(&PC, 3); printf("\t%x\n", PC);
-	printf("MBR: \t\t\t"); binario(&MBR, 2); printf("\t\t\t\t%x\n", MBR);
+	printf("MBR: \t\t"); binario(&MBR, 2); printf("\t\t%x\n", MBR);
 	printf("SP:  "); binario(&SP,3); printf("\t%x\n", SP);
 	printf("LV:  "); binario(&LV,3); printf("\t%x\n", LV);
 	printf("CPP: "); binario(&CPP,3); printf("\t%x\n", CPP);
@@ -253,11 +253,10 @@ void exibir_processos(){
 	printf("OPC: "); binario(&OPC, 3); printf("\t%x\n", OPC);
 	printf("H:   "); binario(&H, 3); printf("\t%x\n", H);
 
-	printf("MPC: \t\t\t"); binario(&MPC, 5); printf("\t%x\n", MPC);
+	printf("MPC: \t\t"); binario(&MPC, 5); printf("\t%x\n", MPC);
 	printf("MIR: "); binario(&MIR, 4); printf("\n");
 
 	getchar();
-
 }
 
 
