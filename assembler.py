@@ -40,7 +40,7 @@ def checar_label(string):                   # checa se um elemento é uma label
     global contador_linha, dic_variaveis, dic_instrucoes
 
     if string in dic_variaveis.keys():
-        add_erro("Label com mesmo número de uma variável", contador_linha)
+        add_erro("Label com mesmo nome de uma variável", contador_linha)
         return False
     else:
         return string not in dic_instrucoes.keys() and string.replace("_", "").isalnum()
